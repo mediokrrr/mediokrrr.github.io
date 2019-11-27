@@ -1,0 +1,109 @@
+/* =NORMALIZE
+-------------------------------------------------------------- */
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap&subset=latin-ext');
+
+/* =Reset
+-------------------------------------------------------------- */
+ 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+ 
+html,
+body,
+div{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	background: linear-gradient(to right, #5f2c82, #49a09d);
+	font-family: 'Montserrat', sans-serif;
+}
+	
+/* =Structures
+-------------------------------------------------------------- */
+ 
+#wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+ 
+#primary{
+    max-width: 650px;
+    margin: 0 auto;
+	color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+    #primary {
+		width:100%;
+		margin: 0 auto;
+    }
+}
+.name, .desc, .blog {text-transform:uppercase;font-weight: 700;}
+i, em, b, strong {font-weight:700;}
+#about {text-align:justify;}
+#social {font-size:1.8em;text-align:center;text-transform:uppercase;padding:1em;}
+.center {text-align:center;}
+#social a, #social a:link, #social a:hover, #sociala:active{text-decoration:none;background: transparent;}
+a, a:link {color: #01c6cf;text-decoration:none;text-transform:uppercase;padding: 0 .2em;background:rgba(0, 0, 0, 0.3);}
+a:hover,a:active{background: rgba(1, 198, 207, 0.5); color: #fff; ;text-decoration:none;}
+
+
+/* =Collapsibles
+-------------------------------------------------------------- */
+
+.collapsible {
+  background: rgba(0, 0, 0, 0.3) /* Black background with 30% opacity */;
+  color: #fff;
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: 	font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.active, .collapsible:hover {
+  background: rgba(1, 198, 207, 0.5);
+  color: #fff;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 1em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background: rgba(0, 0, 0, 0.3);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content a, .content a:link, .content a:hover, .content a:active{text-decoration:none;background: transparent;}
+
+.content ul {
+ padding: 1em 0 0 0;
+ font-size:1.6em;
+ list-style: none;
+}
